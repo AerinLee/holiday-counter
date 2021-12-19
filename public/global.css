@@ -66,15 +66,15 @@ button:focus {
 
 @font-face{
 	font-family: 'MonteCarlo';
-	src: url('/fonts/MonteCarlo-Regular.ttf') format('truetype');
+	src: url('./fonts/MonteCarlo-Regular.ttf') format('truetype');
 }
 
 @font-face{
 	font-family: 'GowunBatang-Bold';
-	src: url('/fonts/GowunBatang-Bold.ttf') format('truetype');
+	src: url('./fonts/GowunBatang-Bold.ttf') format('truetype');
 }
 
 @font-face{
 	font-family: 'GowunBatang-Regular';
-	src: url('/fonts/GowunBatang-Regular.ttf') format('truetype');
+	src: url('./fonts/GowunBatang-Regular.ttf') format('truetype');
 }
