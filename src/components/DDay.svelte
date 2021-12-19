@@ -51,5 +51,6 @@ const init = () => {
         width : 30%;
         font-size : 1.6rem;
         align-items: flex-end;
+        margin: 2rem 0;
     }
 </style>

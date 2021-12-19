@@ -57,7 +57,7 @@ export default function makeItSnow(node) {
     canvas.style.position = "absolute";
     canvas.style.top = 0;
     canvas.style.left = 0;
-    canvas.style.zIndex = 12;
+    canvas.style.zIndex = -999;
     canvas.style.boxSizing = "border-box";
 
     node.style.position = "relative";

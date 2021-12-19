@@ -5,7 +5,7 @@ html, body {
 }
 
 body {
-	background-color: #95caffab;
+	background-color:  #95caffab;
 	color: #333;
 	margin: 0;
 	padding: 8px;
@@ -62,6 +62,10 @@ button:not(:disabled):active {
 
 button:focus {
 	border-color: #666;
+}
+
+p {
+	width: fit-content;
 }
 
 @font-face{
