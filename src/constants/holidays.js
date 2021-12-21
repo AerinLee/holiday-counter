@@ -1,6 +1,6 @@
 export const holidays = [
     {'date' : '2021-12-25', 'name': '크리스마스🎄', 'isWeekend': true, 'substitution' : false },
-    {'date' : '2022-01-01', 'name': '신정', 'isWeekend': false, },
+    {'date' : '2022-01-01', 'name': '신정', 'isWeekend': true, 'substitution' : false },
     {'date' : '2022-01-31', 'name': '설', 'isWeekend': false, },
     {'date' : '2022-03-01', 'name': '삼일절', 'isWeekend': false, },
     {'date' : '2022-03-09', 'name': '대통령선거', 'isWeekend': false, },

@@ -5,7 +5,6 @@
 	import Space from './components/Space.svelte'
 	import Bulb from './components/Bulbs.svelte'
 	import Tree from './components/Tree.svelte'
-	import makeItSnow from './components/Snow.js'
 	import Btn from './components/Button.svelte'
 
 	let nextHolidayIdx;
@@ -18,14 +17,14 @@
 	$: {
 		if(nextHoliday){
 			let m = nextHoliday['date'].split('-')[1]
-			if(m == '01' || m == '02' || m == '12'){
+			if(m == '01' || m == '02' || m == '12'){ //겨울
 				document.body.style.backgroundColor = '#95caffab'
-			} else if (m == '03' || m == '04' || m == '05'){
-				document.body.style.backgroundColor = '#94e572ab'
-			}else if (m == '06' || m == '07' || m == '08'){
-				document.body.style.backgroundColor = '#3197ffab'
-			}else if (m == '09' || m == '10' || m == '11'){
-				document.body.style.backgroundColor = '#ed861bab'
+			} else if (m == '03' || m == '04' || m == '05'){ //봄
+				document.body.style.backgroundColor = '#F0EDAA'
+			}else if (m == '06' || m == '07' || m == '08'){ //여름
+				document.body.style.backgroundColor = '#A2EDE9'
+			}else if (m == '09' || m == '10' || m == '11'){ //가을
+				document.body.style.backgroundColor = '#E6C4AC'
 			}
 		}
 	}
@@ -65,7 +64,7 @@
 </script>
 
 
-<main use:makeItSnow>
+<main>
 	{#if nextHoliday && nextHoliday['name'] == '크리스마스🎄'}
 	<Bulb></Bulb>
 	{/if}
@@ -78,13 +77,16 @@
 	<div class="content-wrap">
 		<Btn disabled={hasPrev} value='◁' event={goPrevHoliday}></Btn>
 		<div class="count-wrap">
-			<p class="message" >다음 빨간 날은 <red>{nextHoliday['name']}</red> ({nextHoliday['date']}) 입니다.</p>
+			<p class="message" >다음 빨간 날은 <br><red>{nextHoliday['name']}</red> ({nextHoliday['date']}) 입니다.</p>
 
 			<DDay value='{nextHoliday['date']}'></DDay> 
 
 			<p class="message" >남았습니다.</p>
+		</div>
+		<Btn disabled={hasNext} value='▷' event={goNextHoliday}></Btn>
+	</div>
 			<Space h_value=2></Space>
-
+		<div class="count-wrap">
 			{#if nextHoliday['isWeekend']}
 				<p class="message" >하지만 그날은 주말이군요😥</p>
 				{#if nextHoliday['substitution']}
@@ -94,8 +96,9 @@
 				{/if}
 			{/if}
 		</div>
-		<Btn disabled={hasNext} value='▷' event={goNextHoliday}></Btn>
-	</div>
+	
+		
+	
 	{/if}
 
 	{#if nextHoliday && nextHoliday['name'] == '크리스마스🎄'}
@@ -107,14 +110,16 @@
 
 
 <style>
-	
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: auto;
-		height: inherit;
+	@media (min-width:768px) {
+		main {
+			text-align: center;
+			padding: 1em;
+			max-width: 240px;
+			margin: auto;
+			height: inherit;
+		}
 	}
+
 
 	h1 {
 		color: #d11a1abb;
@@ -123,10 +128,12 @@
 		font-weight: 100;
 	}
 
+
 	.message {
 		font-size: 1.6rem;
 		margin: 0;
 	}
+
 
 	red {
 		color: red;
@@ -147,5 +154,24 @@
 		main {
 			max-width: none;
 		}
+	}
+
+	@media (max-width:768px) {
+		main {
+			text-align: center;
+			margin: auto;
+			height: inherit;
+			max-width: none;
+		}
+
+		h1 {
+			font-size: 2em;
+		}
+
+		.message {
+			font-size: 1.2rem;
+			margin: 0;
+		}
+
 	}
 </style>

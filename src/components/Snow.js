@@ -41,7 +41,7 @@ class SnowFlake {
     }
 };
 
-export default function makeItSnow(node) {
+export default function makeItSnow(node, snowColor) {
 
     let canvas = document.createElement("canvas");
     let ctx = canvas.getContext("2d");
@@ -88,7 +88,7 @@ export default function makeItSnow(node) {
         for (const flake of snowflakes) {
             flake.update();
             ctx.save();
-            ctx.fillStyle = "#FFFFFF";
+            ctx.fillStyle = snowColor;
             ctx.beginPath();
             ctx.arc(flake.x, flake.y, flake.r, 0, Math.PI * 2);
             ctx.closePath();

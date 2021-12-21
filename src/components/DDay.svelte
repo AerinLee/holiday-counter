@@ -46,11 +46,26 @@ const init = () => {
 </div>
 
 <style>
-    .dday-wrap {
-        display : inline-flex;
-        width : 30%;
-        font-size : 1.6rem;
-        align-items: flex-end;
-        margin: 2rem 0;
+    @media (min-width:768px) {
+        .dday-wrap {
+            display : inline-flex;
+            width : 30%;
+            font-size : 1.6rem;
+            align-items: flex-end;
+            margin: 2rem 0;
+        }
+    }   
+
+    @media (max-width:768px) {
+        .dday-wrap {
+            display : inline-flex;
+            width : 80%;
+            font-size : 1rem;
+            align-items: flex-end;
+            margin: 1rem 0;
+        }
+    
+    
     }
+
 </style>
