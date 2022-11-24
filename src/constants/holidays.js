@@ -13,7 +13,17 @@ export const holidays = [
     {'date' : '2022-10-03', 'name': '개천절', 'isWeekend': false, },
     {'date' : '2022-10-09', 'name': '한글날', 'isWeekend': true, 'substitution' : true},
     {'date' : '2022-12-25', 'name': '크리스마스🎄', 'isWeekend': true, 'substitution' : false},
-    {'date' : '2022-01-01', 'name': '신정', 'isWeekend': true, 'substitution' : false },
-    {'date' : '2022-01-21', 'name': '설', 'isWeekend': false, }
+    {'date' : '2023-01-01', 'name': '신정', 'isWeekend': true, 'substitution' : false },
+    {'date' : '2023-01-21', 'name': '설', 'isWeekend': false, 'substitution' : true },
+    {'date' : '2023-03-01', 'name': '삼일절', 'isWeekend': false, },
+    {'date' : '2023-05-05', 'name': '어린이날', 'isWeekend': false, },
+    {'date' : '2023-05-26', 'name': '석가탄신일', 'isWeekend': false },
+    {'date' : '2023-06-06', 'name': '현충일', 'isWeekend': false, },
+    {'date' : '2023-08-15', 'name': '광복절', 'isWeekend': false, },
+    {'date' : '2023-09-09', 'name': '추석', 'isWeekend': false, },
+    {'date' : '2023-10-03', 'name': '개천절', 'isWeekend': false, },
+    {'date' : '2023-10-09', 'name': '한글날', 'isWeekend': false, },
+    {'date' : '2023-12-25', 'name': '크리스마스🎄', 'isWeekend': false, },
+    
 
 ]
